@@ -19,8 +19,12 @@
             <Setter Property="BorderWidth" Value="1"/>
             <Setter Property="BorderColor" Value="White"/>
         </Style>
+        <Style TargetType="Label">
+            <Setter Property="FontSize" Value="40" />
+            <Setter Property="HorizontalOptions" Value="Center"/>
+        </Style>
     </ContentPage.Resources>
-    
+
     <Grid RowDefinitions="*, *, *, *" ColumnDefinitions="*, *, *" ColumnSpacing="10" RowSpacing="10" Margin="10">
         <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Text="Jogo da velha"/>
         

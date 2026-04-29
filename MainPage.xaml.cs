@@ -6,15 +6,15 @@
         public MainPage()
         {
             InitializeComponent();
+            zerar();
         }
 
         private void Button_Clicked(object sender, EventArgs e)
         {
             Button btn = (Button)sender;
-
-            if(btn.Text != "X" && btn.Text != "O")
+            
+            if (btn.Text != "X" && btn.Text != "O")
             {
-                velha();
                 if (vez == "X")
                 {
                     btn.Text = "X";
@@ -27,6 +27,7 @@
                     vez = "X";
                     vencerO();
                 }
+                velha();
             }
         }
         void vencerX()
@@ -129,7 +130,6 @@
         }
         void zerar()
         {
-            DisplayAlert("Eita", "Deu velha", "OK");
             btn11.Text = "";
             btn12.Text = "";
             btn13.Text = "";
@@ -143,11 +143,13 @@
         }
         void velha()
         {
-            if(btn11.Text != "" || btn12.Text != "" || btn13.Text != "" || btn21.Text != "" || btn22.Text != "" || btn23.Text != "" || btn31.Text != "" || btn32.Text != "" || btn33.Text != "")
+            if(btn11 != null)
             {
-            }else
-            {
-                zerar();
+                if (btn11.Text != "" && btn12.Text != "" && btn13.Text != "" && btn21.Text != "" && btn22.Text != "" && btn23.Text != "" && btn31.Text != "" && btn32.Text != "" && btn33.Text != "")
+                {
+                    DisplayAlert("Eita", "Deu velha", "OK");
+                    zerar();
+                }
             }
         }
     }
