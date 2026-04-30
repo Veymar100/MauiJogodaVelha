@@ -36,7 +36,7 @@
             {
                 zerarX();
             }
-            if (btn21.Text == "X" && btn22.Text == "X" && btn33.Text == "X")
+            if (btn21.Text == "X" && btn22.Text == "X" && btn23.Text == "X")
             {
                 zerarX();
             }
@@ -71,7 +71,7 @@
             {
                 zerarO();
             }
-            if (btn21.Text == "O" && btn22.Text == "O" && btn33.Text == "O")
+            if (btn21.Text == "O" && btn22.Text == "O" && btn23.Text == "O")
             {
                 zerarO();
             }
